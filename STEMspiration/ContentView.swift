@@ -10,30 +10,39 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        
-        VStack(alignment: .leading, spacing: 20.0) {
-            Image("Joy")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(15)
+        ZStack {
             
-            HStack {
-                Text("Joy Buolamwini :)")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                Text("Poet of Code")
-            }
+            Color(.systemPurple)
+                .ignoresSafeArea()
+
+            VStack(alignment: .leading, spacing: 20.0) {
+                        Image("Joy")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(15)
+                        
+                        HStack {
+                            Text("Joy Buolamwini :)")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                            Text("Poet of Code")
+                        }
+                        
+                        Text("Founder of the Algorithmic Justice Leage. Uses art and research to illuminate social implications of AI and to promote equitable and accountable technology.")
+                        
+                    }
+            .padding()
+            .background(Rectangle() .foregroundColor(.white))
+            .cornerRadius(15)
+            .shadow(radius: 15)
             
-            
+            .padding()
 
             
-            Text("Founder of the Algorithmic Justice Leage. Uses art and research to illuminate social implications of AI and to promote equitable and accountable technology.")
-            
-    
-            
-            
-            
         }
+        
+        
+        
         
         
         
